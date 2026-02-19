@@ -1,0 +1,151 @@
+// Mock data for demo purposes - works without backend
+export const mockProducts = [
+  {
+    _id: '1',
+    name: 'Wireless Headphones',
+    description: 'Premium noise-cancelling wireless headphones with 30-hour battery life',
+    price: 199.99,
+    category: 'Electronics',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400',
+    rating: 4.5,
+    numReviews: 120,
+    countInStock: 50,
+  },
+  {
+    _id: '2',
+    name: 'Smart Watch',
+    description: 'Fitness tracker with heart rate monitor and GPS',
+    price: 299.99,
+    category: 'Electronics',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400',
+    rating: 4.7,
+    numReviews: 85,
+    countInStock: 30,
+  },
+  {
+    _id: '3',
+    name: 'Running Shoes',
+    description: 'Comfortable running shoes with air cushioning',
+    price: 89.99,
+    category: 'Sports',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400',
+    rating: 4.3,
+    numReviews: 200,
+    countInStock: 100,
+  },
+  {
+    _id: '4',
+    name: 'Laptop Bag',
+    description: 'Stylish and durable laptop bag for 15-inch laptops',
+    price: 49.99,
+    category: 'Accessories',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400',
+    rating: 4.1,
+    numReviews: 65,
+    countInStock: 75,
+  },
+  {
+    _id: '5',
+    name: 'Wireless Mouse',
+    description: 'Ergonomic wireless mouse with precise tracking',
+    price: 39.99,
+    category: 'Electronics',
+    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400',
+    rating: 4.4,
+    numReviews: 150,
+    countInStock: 80,
+  },
+  {
+    _id: '6',
+    name: 'Bluetooth Speaker',
+    description: 'Portable waterproof speaker with 12-hour battery',
+    price: 79.99,
+    category: 'Electronics',
+    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400',
+    rating: 4.6,
+    numReviews: 95,
+    countInStock: 45,
+  },
+  {
+    _id: '7',
+    name: 'Gaming Keyboard',
+    description: 'Mechanical gaming keyboard with RGB lighting',
+    price: 129.99,
+    category: 'Electronics',
+    image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400',
+    rating: 4.8,
+    numReviews: 180,
+    countInStock: 25,
+  },
+  {
+    _id: '8',
+    name: 'Yoga Mat',
+    description: 'Non-slip yoga mat with carrying strap',
+    price: 29.99,
+    category: 'Sports',
+    image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400',
+    rating: 4.2,
+    numReviews: 220,
+    countInStock: 150,
+  },
+];
+
+export const mockCategories = ['Electronics', 'Sports', 'Accessories'];
+
+// Mock user for demo
+export const mockUser = {
+  _id: 'demo-user-1',
+  name: 'Demo User',
+  email: 'demo@example.com',
+  isAdmin: false,
+  token: 'demo-token-123',
+};
+
+// Mock admin user
+export const mockAdmin = {
+  _id: 'demo-admin-1',
+  name: 'Admin User',
+  email: 'admin@example.com',
+  isAdmin: true,
+  token: 'demo-admin-token-456',
+};
+
+// Mock orders
+export const mockOrders = [
+  {
+    _id: 'order-1',
+    orderItems: [mockProducts[0], mockProducts[2]],
+    shippingAddress: {
+      address: '123 Main St',
+      city: 'New York',
+      postalCode: '10001',
+      country: 'USA',
+    },
+    paymentMethod: 'PayPal',
+    itemsPrice: 289.98,
+    taxPrice: 25.20,
+    shippingPrice: 10.00,
+    totalPrice: 325.18,
+    isPaid: true,
+    isDelivered: true,
+    createdAt: '2024-01-15T10:00:00Z',
+  },
+  {
+    _id: 'order-2',
+    orderItems: [mockProducts[1]],
+    shippingAddress: {
+      address: '456 Oak Ave',
+      city: 'Los Angeles',
+      postalCode: '90001',
+      country: 'USA',
+    },
+    paymentMethod: 'Credit Card',
+    itemsPrice: 299.99,
+    taxPrice: 26.20,
+    shippingPrice: 10.00,
+    totalPrice: 336.19,
+    isPaid: true,
+    isDelivered: false,
+    createdAt: '2024-01-20T15:30:00Z',
+  },
+];

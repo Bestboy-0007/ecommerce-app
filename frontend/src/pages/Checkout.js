@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import { useAuth } from '../context/AuthContext';
 import * as api from '../services/api';
 
 const Checkout = () => {
   const navigate = useNavigate();
   const { cartItems, cartTotal, clearCart, shippingAddress: savedShippingAddress, setShippingAddress: setSavedShippingAddress } = useCart();
-  const { user } = useAuth();
   
   const [shippingAddress, setShippingAddress] = useState(savedShippingAddress || {
     address: '',
@@ -58,7 +56,7 @@ const Checkout = () => {
         totalPrice: cartTotal + cartTotal * 0.1 + (cartTotal > 100 ? 0 : 10),
       };
 
-      const { data } = await api.createOrder(orderData);
+      await api.createOrder(orderData);
       clearCart();
       navigate(`/order-history`);
     } catch (err) {
